@@ -45,7 +45,7 @@ function Home() {
       <section ref={heroRef} className="relative md:flex md:min-h-[calc(85vh-72px)] md:items-center">
         {trail && <ImageTrail containerRef={heroRef} images={trailImages} />}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-          <Doodle kind="squiggle" className="draw-now absolute right-[8%] top-[14%] w-40 text-primary md:w-56" />
+          <Doodle kind="squiggle" className="draw-now absolute right-[8%] top-[14%] hidden min-[426px]:block w-40 text-primary md:w-56" />
           <Doodle kind="spark" className="draw-now float-y absolute right-[30%] top-[58%] hidden w-12 text-foreground md:block" />
           <Sticker text="Archie Saluja · Design student · " className="absolute bottom-8 right-[6%] hidden md:block" />
         </div>
@@ -69,7 +69,7 @@ function Home() {
             </div>
           </div>
           {!trail && (
-            <div aria-hidden="true" className="mt-12 flex gap-3 overflow-hidden">
+            <div aria-hidden="true" className="mt-12 hidden gap-3 overflow-hidden lg:flex">
               {featuredProjects.map((p, i) => (
                 <img
                   key={p.id}
@@ -93,8 +93,8 @@ function Home() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="label-sm">Selected work</p>
-              <h2 className="display-lg mt-3">A few things I’ve <span className="mark now">made.</span></h2>
-              <p className="mt-3 max-w-[48ch] text-muted-foreground">Across screens, brands, and social feeds.</p>
+              <h2 className="display-lg mt-3">Ideas, brought to <span className="mark now">life.</span></h2>
+              <p className="mt-3 max-w-[48ch] text-muted-foreground">A selection of work across digital experiences, brand identities, and social media.</p>
             </div>
             <Link to="/work" className="inline-flex min-h-11 items-center font-bold text-primary underline decoration-2 underline-offset-8 hover:decoration-highlight">View all work →</Link>
           </div>

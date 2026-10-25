@@ -19,7 +19,7 @@ export function ProjectCard({ project, eager = false, editorial = false }: { pro
           aria-hidden="true"
           className={`absolute inset-0 rounded-[28px] ${BACKING[project.category] ?? "bg-primary"} transition-transform duration-500 ease-out group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 group-focus-visible:translate-x-3 group-focus-visible:translate-y-3 motion-reduce:transition-none`}
         />
-        <div className={`relative overflow-hidden rounded-[28px] bg-surface shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--color-foreground)_35%,transparent)] transition-transform duration-500 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:-rotate-1 group-focus-visible:-translate-x-1 group-focus-visible:-translate-y-1 motion-reduce:transition-none ${editorial ? "aspect-[16/11] p-4 md:p-6" : "aspect-[3/2]"}`}>
+        <div className={`relative flex items-center justify-center overflow-hidden rounded-[28px] bg-surface shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--color-foreground)_35%,transparent)] transition-transform duration-500 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:-rotate-1 group-focus-visible:-translate-x-1 group-focus-visible:-translate-y-1 motion-reduce:transition-none ${editorial ? "aspect-[16/11] p-4 md:p-6" : "aspect-[16/10] p-2.5 sm:p-3"}`}>
           <img
             src={project.cover.src}
             alt={project.cover.alt}
@@ -27,9 +27,9 @@ export function ProjectCard({ project, eager = false, editorial = false }: { pro
             height={project.cover.height}
             loading={eager ? "eager" : "lazy"}
             decoding="async"
-            className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.03] group-focus-visible:scale-[1.03] motion-reduce:transition-none ${editorial ? "object-contain" : "object-cover"}`}
+            className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03] group-focus-visible:scale-[1.03] motion-reduce:transition-none"
           />
-          {!editorial && <span className="absolute left-4 top-4 rounded-full bg-background px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-foreground">
+          {!editorial && <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-foreground shadow-sm backdrop-blur-xs">
             {project.category}
           </span>}
           <span
