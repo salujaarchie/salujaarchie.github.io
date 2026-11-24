@@ -24,8 +24,8 @@ export const Route = createFileRoute("/resume")({
 const EXPERIENCE = [
   { role: "Design Intern", org: "FRODOH Business Solutions", date: "June–July 2026", text: "Revamped website and campaign-tool interfaces, refreshed brand typography and colours, and designed digital and print collateral." },
   { role: "Social Media Strategist Intern", org: "North & Beyond", date: "May–July 2026", text: "Developed social content concepts, publishing calendars, and campaign direction, collaborating with teams and clients." },
-  { role: "AI Visual Content & Brand Strategy Executive", org: "Ninos Dreams", date: "December 2025–April 2026", text: "Created e-commerce visuals and social content, developed brand strategy, and generated 25K+ organic views in 30 days." },
-  { role: "Business Development & Social Media Research Intern", org: "Tendeza Media", date: "June–July 2025", text: "Researched social trends and competitors to inform campaign messaging and creative direction." },
+  { role: "AI Visual Content & Brand Strategy Intern", org: "Ninos Dreams", date: "December 2025–April 2026", text: "Created e-commerce visuals and social content, developed brand strategy, and generated 25K+ organic views in 30 days." },
+  { role: "Business Development & Social Media Intern", org: "Tendeza Media", date: "June–July 2025", text: "Researched social trends and competitors to inform campaign messaging and creative direction." },
 ];
 const SKILLS = [
   { g: "UI/UX", s: "Research, information architecture, wireframing, prototyping." },
