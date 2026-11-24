@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { Maximize2, X, Download, FileText } from "lucide-react";
+import { Maximize2, X, FileText } from "lucide-react";
 import { getProject, projects } from "@/data/projects";
 
 export const Route = createFileRoute("/work/$slug")({
@@ -88,15 +88,6 @@ function ProjectPage() {
               >
                 <Maximize2 className="h-4 w-4" /> Open Full Vector PDF
               </button>
-              <a
-                href={p.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                className="inline-flex min-h-11 items-center gap-2 rounded-sm border border-foreground px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-foreground hover:text-background"
-              >
-                <Download className="h-4 w-4" /> Download PDF
-              </a>
             </div>
           )}
         </div>
@@ -135,15 +126,6 @@ function ProjectPage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <a
-                href={p.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                className="inline-flex items-center gap-1.5 rounded-sm border px-3 py-1.5 text-xs font-semibold hover:bg-accent"
-              >
-                <Download className="h-3.5 w-3.5" /> Download
-              </a>
               <button
                 type="button"
                 onClick={() => setShowPdfModal(false)}
