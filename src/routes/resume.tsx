@@ -78,7 +78,7 @@ function Resume() {
           <div className="grid gap-1 md:grid-cols-[1fr_auto] md:gap-x-8">
             <h3 className="text-lg font-bold">B.Des, Fashion Communication</h3>
             <p className="label-sm md:pt-1 md:text-right">2023–2027, expected</p>
-            <p className="text-muted-foreground">NIFT Panchkula · CGPA: 8.40/10</p>
+            <p className="text-muted-foreground">NIFT Panchkula · CGPA: 8.30/10</p>
           </div>
         </Row>
         <Row title="Skills">

@@ -268,6 +268,31 @@ export const projects: Project[] = [
     pdf: resolveAsset("pdf/industry-internship.pdf"),
     sections: [],
   },
+  {
+    id: "social-media-portfolio",
+    slug: "social-media-portfolio",
+    title: "Social Media Portfolio",
+    category: "Social Media",
+    descriptor: "Management & Strategy",
+    featured: false,
+    summary: "A social media management portfolio: strategy, content calendars, creative direction and campaign work for Ninos Dreams, Glasgow Cosmic and FRODOH.",
+    cover: { src: resolveAsset("social-media/social-media-page-01.webp"), alt: "Social Media Portfolio cover slide", width: 2400, height: 1348 },
+    previews: [
+      { src: resolveAsset("social-media/social-media-page-05.webp"), alt: "Social media portfolio slide 05", width: 2400, height: 1348 },
+      { src: resolveAsset("social-media/social-media-page-06.webp"), alt: "Social media portfolio slide 06", width: 2400, height: 1348 },
+    ],
+    boards: Array.from({ length: 12 }, (_, i) => {
+      const pageNum = String(i + 1).padStart(2, "0");
+      return {
+        src: resolveAsset(`social-media/social-media-page-${pageNum}.webp`),
+        alt: `Social media portfolio slide ${pageNum}`,
+        width: 2400,
+        height: 1348,
+      };
+    }),
+    pdf: resolveAsset("pdf/social-media-portfolio.pdf"),
+    sections: [],
+  },
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
